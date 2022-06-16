@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Css Fundamentos - Flex Grow, Basis & Shrink</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: 2px solid black;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background-color: blueviolet;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .bauto {
+            flex-basis: auto;
+        }
+
+        .fg-0 {
+            flex-grow: 0;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+
+        .fg-3 {
+            flex-grow: 3;
+        }
+
+        .fs-1 {
+            flex-shrink: 1;
+        }
+
+        .flex-1 {
+            flex: 1;
+            /* grow = 1, shrink = 1, basis = 0 */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>Flex Grow: 0</p>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
+    </div>
+
+    <p>Flex Grow: 1</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+
+    <p>Flex Grow: Alternados</p>
+    <div class="flex-container">
+        <div class="item fg-0">AAAA</div>
+        <div class="item fg-1">BBBBB</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-3">D</div>
+    </div>
+
+    <p>Flex Basis: Auto</p>
+    <div class="flex-container">
+        <div class="item bauto fg-0">AAAA</div>
+        <div class="item fg-1">BBBBB</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-3">DEF</div>
+    </div>
+
+    <p>Flex Shrink: 1</p>
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">BBBBBBBBBBBBBBB</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+    </div>
+
+    <p>Flex</p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBBBBBB</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-1">DEF</div>
+    </div>
+
+
+</body>
+</html>
+
